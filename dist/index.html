@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css?v=2.1" />
   </head>
   <body class="overflow-x-hidden font-sans antialiased text-ink bg-paper">
     <a href="#conteudo" class="focus-ring fixed top-3 left-3 z-100 -translate-y-20 rounded-full bg-white px-5 py-3 font-bold text-ink shadow-xl transition focus:translate-y-0">
@@ -173,106 +173,106 @@
             </div>
           </div>
 
-          <!-- Vitrine Arquitetônica em Bento-Grid com 6 Fotos Temáticas (Sem Pessoas) -->
+          <!-- Vitrine Arquitetônica em Grid 3x2 Equilibrado (6 Fotos - Rigorosamente Sem Pessoas) -->
           <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- 1. Liberdade de Projeto (espaco-sonho.jpeg) -->
-            <article class="reveal card-interactive group relative min-h-115 overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:col-span-2 sm:rounded-[2.5rem]">
-              <img src="./img/espaco-sonho.jpeg" alt="Projeto arquitetônico moderno de residência em lote amplo no condomínio" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div class="absolute inset-0 bg-linear-to-t from-ink via-ink/30 to-transparent"></div>
-              <div class="absolute right-0 bottom-0 left-0 p-8 text-white sm:p-10">
-                <span class="inline-flex items-center gap-2 rounded-full bg-sun/90 px-3.5 py-1 text-xs font-bold text-ink">
+            <!-- 1. Liberdade de Projeto -->
+            <article class="reveal card-interactive group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem] min-h-110" style="min-height: 440px;">
+              <img src="./img/espaco-sonho.jpeg" alt="Projeto arquitetônico de residência em lote amplo no Quinta do Caçador" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-linear-to-trom-black/90 via-black/45 to-transparent"></div>
+              <div class="relative z-10 p-7 text-white sm:p-8">
+                <span class="inline-flex items-center gap-2 rounded-full bg-amber-500 px-3.5 py-1 text-xs font-bold text-stone-950 shadow-sm">
                   Lotes a partir de 450 m²
                 </span>
-                <h3 class="mt-3 max-w-xl font-display text-3xl leading-tight font-semibold sm:text-4xl text-balance">
-                  Liberdade total para desenhar seu estilo de vida.
+                <h3 class="mt-3 font-display text-2xl leading-tight font-semibold sm:text-3xl text-balance text-white drop-shadow-sm">
+                  Liberdade total para desenhar seu projeto
                 </h3>
-                <p class="mt-2 max-w-lg text-sm text-white/80 sm:text-base text-pretty">
-                  Dimensões generosas para projetos térreos ou de dois pavimentos com recuos amplos, iluminação natural e ventilação cruzada.
+                <p class="mt-2 text-sm text-white/85 text-pretty">
+                  Dimensões generosas para residências térreas ou de dois pavimentos com recuos amplos e privacidade.
                 </p>
               </div>
             </article>
 
-            <!-- 2. Residência Contemporânea (casa-conceito.jpeg) -->
-            <article class="reveal card-interactive group relative min-h-115 overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem]">
-              <img src="./img/casa-conceito.jpeg" alt="Fachada contemporânea com linhas retas e gramado verde" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div class="absolute inset-0 bg-linear-to-t from-ink via-ink/30 to-transparent"></div>
-              <div class="absolute right-0 bottom-0 left-0 p-8 text-white sm:p-10">
-                <span class="inline-flex items-center gap-2 rounded-full bg-white/90 px-3.5 py-1 text-xs font-bold text-ink">
+            <!-- 2. Arquitetura Contemporânea -->
+            <article class="reveal card-interactive group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem] min-h-110" style="min-height: 440px;">
+              <img src="./img/casa-conceito.jpeg" alt="Fachada contemporânea de casa com gramado verde sem pessoas" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+              <div class="relative z-10 p-7 text-white sm:p-8">
+                <span class="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1 text-xs font-bold text-stone-950 shadow-sm">
                   Arquitetura Contemporânea
                 </span>
-                <h3 class="mt-3 font-display text-2xl leading-tight font-semibold sm:text-3xl text-balance">
+                <h3 class="mt-3 font-display text-2xl leading-tight font-semibold sm:text-3xl text-balance text-white drop-shadow-sm">
                   Fachadas Elegantes e Modernas
                 </h3>
-                <p class="mt-2 text-sm text-white/80 text-pretty">
-                  Projetos de alto padrão integrados ao relevo, garantindo valorização patrimonial e identidade única.
+                <p class="mt-2 text-sm text-white/85 text-pretty">
+                  Alto padrão construtivo integrado ao relevo, assegurando valorização patrimonial e sofisticação.
                 </p>
               </div>
             </article>
 
-            <!-- 3. Piscina Privativa e Área Gourmet (gourmet-piscina.jpeg) -->
-            <article class="reveal card-interactive group relative min-h-100 overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem]">
-              <img src="./img/gourmet-piscina.jpeg" alt="Piscina privativa com deck molhado e área de lazer privativa" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div class="absolute inset-0 bg-linear-to-t from-ink via-ink/30 to-transparent"></div>
-              <div class="absolute right-0 bottom-0 left-0 p-8 text-white sm:p-9">
-                <span class="inline-flex items-center gap-2 rounded-full bg-sky/90 px-3.5 py-1 text-xs font-bold text-ink">
+            <!-- 3. Piscina Privativa e Área Gourmet -->
+            <article class="reveal card-interactive group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem] min-h-[440px]" style="min-height: 440px;">
+              <img src="./img/gourmet-piscina.jpeg" alt="Piscina privativa com deck molhado e área de lazer sem pessoas" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+              <div class="relative z-10 p-7 text-white sm:p-8">
+                <span class="inline-flex items-center gap-2 rounded-full bg-amber-400 px-3.5 py-1 text-xs font-bold text-stone-950 shadow-sm">
                   Lazer Privativo
                 </span>
-                <h3 class="mt-3 font-display text-2xl leading-tight font-semibold sm:text-3xl text-balance">
+                <h3 class="mt-3 font-display text-2xl leading-tight font-semibold sm:text-3xl text-balance text-white drop-shadow-sm">
                   Piscina & Varanda Gourmet
                 </h3>
-                <p class="mt-2 text-sm text-white/80 text-pretty">
-                  Espaço de sobra para piscina exclusiva, deck ensolarado e churrasqueira para celebrar os fins de semana.
+                <p class="mt-2 text-sm text-white/85 text-pretty">
+                  Espaço exclusivo para deck ensolarado, piscina e churrasqueira para celebrar os fins de semana com a família.
                 </p>
               </div>
             </article>
 
-            <!-- 4. Paisagismo e Arte ao Ar Livre (arte-jardins.jpeg) -->
-            <article class="reveal card-interactive group relative min-h-100 overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem]">
-              <img src="./img/arte-jardins.jpeg" alt="Escultura e paisagismo integrado em área verde do condomínio" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div class="absolute inset-0 bg-linear-to-t from-ink via-ink/30 to-transparent"></div>
-              <div class="absolute right-0 bottom-0 left-0 p-8 text-white sm:p-9">
-                <span class="inline-flex items-center gap-2 rounded-full bg-leaf/90 px-3.5 py-1 text-xs font-bold text-white">
+            <!-- 4. Paisagismo e Alamedas Arborizadas -->
+            <article class="reveal card-interactive group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem] min-h-[440px]" style="min-height: 440px;">
+              <img src="./img/paisagismo-condominio.jpeg" alt="Alamedas verdes e paisagismo integrado sem pessoas" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+              <div class="relative z-10 p-7 text-white sm:p-8">
+                <span class="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-3.5 py-1 text-xs font-bold text-white shadow-sm">
                   Natureza Preservada
                 </span>
-                <h3 class="mt-3 font-display text-2xl leading-tight font-semibold sm:text-3xl text-balance">
-                  Paisagismo & Arte Nativa
+                <h3 class="mt-3 font-display text-2xl leading-tight font-semibold sm:text-3xl text-balance text-white drop-shadow-sm">
+                  Paisagismo & Alamedas
                 </h3>
-                <p class="mt-2 text-sm text-white/80 text-pretty">
-                  Alamedas arborizadas, árvores nativas e áreas de contemplação em mais de 50.000 m² de verde.
+                <p class="mt-2 text-sm text-white/85 text-pretty">
+                  Ruas pavimentadas com arborização, áreas de contemplação e ar puro em meio a mais de 50.000 m² de verde.
                 </p>
               </div>
             </article>
 
-            <!-- 5. Quintal Generoso e Jardim Privativo (jardim-privativo.jpeg) -->
-            <article class="reveal card-interactive group relative min-h-100 overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem]">
-              <img src="./img/jardim-privativo.jpeg" alt="Amplo gramado verde e jardins planejados ao redor de casa moderna" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div class="absolute inset-0 bg-linear-to-t from-ink via-ink/30 to-transparent"></div>
-              <div class="absolute right-0 bottom-0 left-0 p-8 text-white sm:p-9">
-                <span class="inline-flex items-center gap-2 rounded-full bg-amber-500/90 px-3.5 py-1 text-xs font-bold text-ink">
-                  Jardim Exuberante
+            <!-- 5. Quintal Generoso e Jardim Privativo -->
+            <article class="reveal card-interactive group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem] min-h-[440px]" style="min-height: 440px;">
+              <img src="./img/jardim-privativo.jpeg" alt="Amplo gramado verde e jardins planejados sem pessoas" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+              <div class="relative z-10 p-7 text-white sm:p-8">
+                <span class="inline-flex items-center gap-2 rounded-full bg-lime-400 px-3.5 py-1 text-xs font-bold text-stone-950 shadow-sm">
+                  Jardins Exuberantes
                 </span>
-                <h3 class="mt-3 font-display text-2xl leading-tight font-semibold sm:text-3xl text-balance">
+                <h3 class="mt-3 font-display text-2xl leading-tight font-semibold sm:text-3xl text-balance text-white drop-shadow-sm">
                   Mais Verde ao Redor
                 </h3>
-                <p class="mt-2 text-sm text-white/80 text-pretty">
-                  Espaço para cultivar hortas, pomares e um jardim amplo para seus animais de estimação correrem livres.
+                <p class="mt-2 text-sm text-white/85 text-pretty">
+                  Terreno de sobra para cultivar pomares, jardins floridos e proporcionar espaço livre para seus animais de estimação.
                 </p>
               </div>
             </article>
 
-            <!-- 6. Pôr do Sol e Vista Panorâmica (entardecer.jpeg) -->
-            <article class="reveal card-interactive group relative min-h-95 overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:col-span-2 lg:col-span-3 sm:rounded-[2.5rem]">
-              <img src="./img/entardecer.jpeg" alt="Pôr do sol dourado e vista aberta do horizonte no Quinta do Caçador Residence" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div class="absolute inset-0 bg-linear-to-r from-ink/90 via-ink/50 to-transparent"></div>
-              <div class="relative z-10 flex h-full flex-col justify-end p-8 text-white sm:max-w-2xl sm:p-12">
-                <span class="inline-flex w-fit items-center gap-2 rounded-full bg-sun/90 px-3.5 py-1 text-xs font-bold text-ink">
+            <!-- 6. Pôr do Sol e Vista Panorâmica -->
+            <article class="reveal card-interactive group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem] min-h-[440px]" style="min-height: 440px;">
+              <img src="./img/entardecer-natureza.jpeg" alt="Pôr do sol dourado sobre a natureza e colinas sem pessoas" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+              <div class="relative z-10 p-7 text-white sm:p-8">
+                <span class="inline-flex items-center gap-2 rounded-full bg-amber-500 px-3.5 py-1 text-xs font-bold text-stone-950 shadow-sm">
                   Vista Panorâmica
                 </span>
-                <h3 class="mt-4 font-display text-3xl leading-tight font-semibold sm:text-5xl text-balance">
-                  O privilégio de assistir ao pôr do sol todos os dias.
+                <h3 class="mt-3 font-display text-2xl leading-tight font-semibold sm:text-3xl text-balance text-white drop-shadow-sm">
+                  Pôr do Sol Todos os Dias
                 </h3>
-                <p class="mt-3 text-base text-white/80 sm:text-lg text-pretty">
-                  Um horizonte limpo e o clima acolhedor da Zona da Mata pernambucana para desacelerar da rotina com tranquilidade e ar puro.
+                <p class="mt-2 text-sm text-white/85 text-pretty">
+                  O privilégio de assistir ao horizonte dourado e respirar a brisa fresca da Zona da Mata pernambucana.
                 </p>
               </div>
             </article>
