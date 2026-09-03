@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/styles.css?v=2.2" />
+    <link rel="stylesheet" href="./css/styles.css?v=2.3" />
   </head>
   <body class="overflow-x-hidden font-sans antialiased text-ink bg-paper">
     <a href="#conteudo" class="focus-ring fixed top-3 left-3 z-100 -translate-y-20 rounded-full bg-white px-5 py-3 font-bold text-ink shadow-xl transition focus:translate-y-0">
@@ -35,15 +35,17 @@
           </span>
         </a>
 
-        <!-- Links Desktop -->
-        <div class="hidden items-center gap-8 text-sm font-semibold lg:flex">
-          <a class="focus-ring rounded-md px-2 py-1 transition hover:text-sun" href="#experiencia">Experiência</a>
-          <a class="focus-ring rounded-md px-2 py-1 transition hover:text-sun" href="#estrutura">Estrutura</a>
-          <a class="focus-ring rounded-md px-2 py-1 transition hover:text-sun" href="#localizacao">Localização</a>
-          <a class="focus-ring inline-flex items-center gap-2.5 rounded-full bg-sun px-6 py-2.5 font-bold text-ink shadow-[0_4px_20px_rgba(247,148,37,0.35)] transition-all hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_6px_25px_rgba(255,255,255,0.4)]" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer">
-            <span>Agende uma visita</span>
-            <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 fill-none stroke-current stroke-2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-          </a>
+        <!-- Links Desktop com Efeito Moderno -->
+        <div class="hidden items-center gap-2 text-sm font-semibold lg:flex">
+          <a class="nav-link focus-ring" href="#experiencia"><span>Experiência</span></a>
+          <a class="nav-link focus-ring" href="#estrutura"><span>Estrutura</span></a>
+          <a class="nav-link focus-ring" href="#localizacao"><span>Localização</span></a>
+          <div class="ml-4">
+            <a class="focus-ring group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full bg-linear-to-r from-amber-400 via-sun to-amber-500 px-6 py-2.5 font-extrabold text-stone-950 shadow-[0_4px_25px_rgba(247,148,37,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(247,148,37,0.6)] hover:brightness-105 active:translate-y-0" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer">
+              <span>Agende uma visita</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 fill-none stroke-current stroke-2 transition-transform duration-300 group-hover:translate-x-1"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
         </div>
 
         <!-- Botão Menu Mobile -->
@@ -54,20 +56,20 @@
 
       <!-- Painel do Menu Mobile -->
       <div id="mobile-menu" class="hidden border-t border-white/10 bg-ink/95 backdrop-blur-2xl px-5 py-6 shadow-2xl lg:hidden">
-        <div class="section-shell grid gap-2 px-0">
-          <a class="flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/10" href="#experiencia">
+        <div class="section-shell grid gap-2.5 px-0">
+          <a class="mobile-nav-link focus-ring" href="#experiencia">
             <span>Experiência</span>
             <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 opacity-50 stroke-current fill-none stroke-2"><path d="M9 18l6-6-6-6"/></svg>
           </a>
-          <a class="flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/10" href="#estrutura">
+          <a class="mobile-nav-link focus-ring" href="#estrutura">
             <span>Estrutura</span>
             <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 opacity-50 stroke-current fill-none stroke-2"><path d="M9 18l6-6-6-6"/></svg>
           </a>
-          <a class="flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/10" href="#localizacao">
+          <a class="mobile-nav-link focus-ring" href="#localizacao">
             <span>Localização</span>
             <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 opacity-50 stroke-current fill-none stroke-2"><path d="M9 18l6-6-6-6"/></svg>
           </a>
-          <a class="mt-4 flex items-center justify-center gap-2 rounded-xl bg-sun px-5 py-3.5 text-center font-extrabold text-ink shadow-lg" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer">
+          <a class="mt-4 flex items-center justify-center gap-2 rounded-2xl bg-linear-to-r from-amber-400 via-sun to-amber-500 px-5 py-3.5 text-center font-extrabold text-stone-950 shadow-lg transition-transform active:scale-98" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer">
             <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5 fill-none stroke-current stroke-2"><path d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1 1-4.1A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.4 2.6 2.4 4.6 5 5"/></svg>
             <span>Agende uma visita</span>
           </a>
@@ -178,7 +180,7 @@
             <!-- 1. Liberdade de Projeto -->
             <article class="reveal card-interactive group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem] min-h-110" style="min-height: 440px;">
               <img src="./img/espaco-sonho.jpeg" alt="Projeto arquitetônico de residência em lote amplo no Quinta do Caçador" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+              <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent"></div>
               <div class="relative z-10 p-7 text-white sm:p-8">
                 <span class="inline-flex items-center gap-2 rounded-full bg-amber-500 px-3.5 py-1 text-xs font-bold text-stone-950 shadow-sm">
                   Lotes a partir de 450 m²
@@ -195,7 +197,7 @@
             <!-- 2. Arquitetura Contemporânea -->
             <article class="reveal card-interactive group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem] min-h-110" style="min-height: 440px;">
               <img src="./img/casa-conceito.jpeg" alt="Fachada contemporânea de casa com gramado verde sem pessoas" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+              <div class="absolute inset-0 bg-linear-to-trom-black/90 via-black/45 to-transparent"></div>
               <div class="relative z-10 p-7 text-white sm:p-8">
                 <span class="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1 text-xs font-bold text-stone-950 shadow-sm">
                   Arquitetura Contemporânea
@@ -212,7 +214,7 @@
             <!-- 3. Piscina Privativa e Área Gourmet -->
             <article class="reveal card-interactive group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem] min-h-110" style="min-height: 440px;">
               <img src="./img/lazer-piscina-deck.jpeg" alt="Piscina privativa externa com deck de madeira e área de descanso sem pessoas" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+              <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent"></div>
               <div class="relative z-10 p-7 text-white sm:p-8">
                 <span class="inline-flex items-center gap-2 rounded-full bg-amber-400 px-3.5 py-1 text-xs font-bold text-stone-950 shadow-sm">
                   Lazer Privativo
@@ -229,7 +231,7 @@
             <!-- 4. Paisagismo e Alamedas Arborizadas -->
             <article class="reveal card-interactive group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem] min-h-110" style="min-height: 440px;">
               <img src="./img/paisagismo-alameda.jpeg" alt="Alamedas floridas com árvores e paisagismo preservado sem pessoas" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+              <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent"></div>
               <div class="relative z-10 p-7 text-white sm:p-8">
                 <span class="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-3.5 py-1 text-xs font-bold text-white shadow-sm">
                   Natureza Preservada
@@ -246,7 +248,7 @@
             <!-- 5. Quintal Generoso e Jardins Exuberantes -->
             <article class="reveal card-interactive group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem] min-h-110" style="min-height: 440px;">
               <img src="./img/jardins-exuberantes.jpeg" alt="Jardim verde exuberante com plantas tropicais e flores sem pessoas" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+              <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent"></div>
               <div class="relative z-10 p-7 text-white sm:p-8">
                 <span class="inline-flex items-center gap-2 rounded-full bg-lime-400 px-3.5 py-1 text-xs font-bold text-stone-950 shadow-sm">
                   Jardins Exuberantes
@@ -263,7 +265,7 @@
             <!-- 6. Pôr do Sol e Vista Panorâmica -->
             <article class="reveal card-interactive group relative flex flex-col justify-end overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem] min-h-110" style="min-height: 440px;">
               <img src="./img/entardecer-natureza.jpeg" alt="Pôr do sol dourado sobre a natureza e colinas sem pessoas" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+              <div class="absolute inset-0 bg-linear-to-t from-black/90 via-black/45 to-transparent"></div>
               <div class="relative z-10 p-7 text-white sm:p-8">
                 <span class="inline-flex items-center gap-2 rounded-full bg-amber-500 px-3.5 py-1 text-xs font-bold text-stone-950 shadow-sm">
                   Vista Panorâmica
@@ -492,10 +494,9 @@
         </div>
       </div>
 
-      <div class="section-shell grid gap-4 pt-8 text-sm text-white/45 sm:grid-cols-2 lg:grid-cols-3 lg:items-center">
+      <div class="section-shell flex flex-col items-center justify-between gap-4 pt-8 text-sm text-white/45 sm:flex-row">
         <p>© <span id="year">2026</span> Quinta do Caçador Residence. Todos os direitos reservados.</p>
-        <p class="sm:text-right lg:text-center">BR-408, Km 48 · Paudalho, PE</p>
-        <p class="sm:col-span-2 lg:col-span-1 lg:text-right">
+        <p>
           Desenvolvido por <a class="focus-ring rounded-sm font-bold text-white/75 underline decoration-white/20 underline-offset-4 transition hover:text-sun hover:decoration-sun" href="https://rgnsystems.com.br" target="_blank" rel="noopener noreferrer">RGN Systems Tecnologia</a>
         </p>
       </div>

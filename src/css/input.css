@@ -88,6 +88,95 @@
   -webkit-backdrop-filter: blur(18px);
 }
 
+@utility nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.15rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  color: rgba(255, 255, 255, 0.78);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 1.15rem;
+    right: 1.15rem;
+    height: 2px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #f79425, #ffbe53);
+    box-shadow: 0 0 10px rgba(247, 148, 37, 0.8);
+    opacity: 0;
+    transform: scaleX(0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1;
+  }
+
+  &:hover {
+    color: #ffffff;
+    transform: translateY(-1px);
+
+    &::before {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &::after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@utility mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.25rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(247, 148, 37, 0.5);
+    transform: translateX(4px);
+    box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.3);
+  }
+}
+
 @utility glass-card {
   background-color: color-mix(in srgb, #ffffff 82%, transparent);
   backdrop-filter: blur(14px);
