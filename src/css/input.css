@@ -5,27 +5,27 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --color-paper: #fbf8f2;
-  --color-paper-alt: #f4efe6;
-  --color-ink: #12243d;
-  --color-ink-muted: #566a85;
-  --color-card-bg: #ffffff;
-  --color-card-border: rgba(18, 36, 61, 0.08);
-  --color-nav-bg: rgba(255, 255, 255, 0.92);
-  --color-nav-text: #12243d;
-  --color-nav-border: rgba(18, 36, 61, 0.10);
+  --theme-bg: #fbf8f2;
+  --theme-text: #12243d;
+  --theme-muted-text: #566a85;
+  --theme-nav-bg: rgba(255, 255, 255, 0.92);
+  --theme-nav-text: #12243d;
+  --theme-nav-border: rgba(18, 36, 61, 0.10);
+  --theme-card-bg: #ffffff;
+  --theme-card-border: rgba(18, 36, 61, 0.08);
+  --theme-structure-bg: #f4efe6;
 }
 
 html.dark {
-  --color-paper: #080f1d;
-  --color-paper-alt: #0c1628;
-  --color-ink: #f3f6fb;
-  --color-ink-muted: #94a3b8;
-  --color-card-bg: #132138;
-  --color-card-border: rgba(255, 255, 255, 0.10);
-  --color-nav-bg: rgba(8, 15, 29, 0.92);
-  --color-nav-text: #ffffff;
-  --color-nav-border: rgba(255, 255, 255, 0.12);
+  --theme-bg: #080f1d;
+  --theme-text: #f3f6fb;
+  --theme-muted-text: #94a3b8;
+  --theme-nav-bg: rgba(8, 15, 29, 0.92);
+  --theme-nav-text: #ffffff;
+  --theme-nav-border: rgba(255, 255, 255, 0.12);
+  --theme-card-bg: #132138;
+  --theme-card-border: rgba(255, 255, 255, 0.10);
+  --theme-structure-bg: #0c1628;
 }
 
 @theme {
@@ -40,7 +40,6 @@ html.dark {
   --color-sun: #f79425;
   --color-sky: #10a3d9;
   --color-leaf: #2d6b4f;
-  --color-paper: #fbf8f2;
   --color-sand: #eee6da;
 
   --shadow-glow-sun: 0 12px 35px -5px rgba(247, 148, 37, 0.35);
@@ -75,8 +74,8 @@ html.dark {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   body {
-    background: var(--color-paper);
-    color: var(--color-ink);
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   ::selection {
@@ -111,9 +110,9 @@ html.dark {
 }
 
 @utility glass-nav {
-  background-color: var(--color-nav-bg);
-  color: var(--color-nav-text);
-  border-bottom-color: var(--color-nav-border);
+  background-color: var(--theme-nav-bg);
+  color: var(--theme-nav-text);
+  border-bottom: 1px solid var(--theme-nav-border);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   transition: all 0.3s ease;
@@ -128,7 +127,7 @@ html.dark {
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.025em;
-  color: var(--color-nav-text);
+  color: var(--theme-nav-text);
   opacity: 0.85;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
@@ -138,10 +137,10 @@ html.dark {
     position: absolute;
     inset: 0;
     border-radius: 9999px;
-    background: color-mix(in srgb, var(--color-nav-text) 8%, transparent);
+    background: color-mix(in srgb, var(--theme-nav-text) 8%, transparent);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid color-mix(in srgb, var(--color-nav-text) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--theme-nav-text) 14%, transparent);
     opacity: 0;
     transform: scale(0.85);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -222,14 +221,14 @@ html.dark {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 9999px;
-  border: 1px solid color-mix(in srgb, var(--color-nav-text) 18%, transparent);
-  background: color-mix(in srgb, var(--color-nav-text) 6%, transparent);
-  color: var(--color-nav-text);
+  border: 1px solid color-mix(in srgb, var(--theme-nav-text) 18%, transparent);
+  background: color-mix(in srgb, var(--theme-nav-text) 6%, transparent);
+  color: var(--theme-nav-text);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 
   &:hover {
-    background: color-mix(in srgb, var(--color-nav-text) 14%, transparent);
+    background: color-mix(in srgb, var(--theme-nav-text) 14%, transparent);
     border-color: #f79425;
     color: #f79425;
     transform: rotate(15deg) scale(1.05);
@@ -244,21 +243,32 @@ html.dark {
   border-radius: 1rem;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--color-nav-text);
+  color: var(--theme-nav-text);
   opacity: 0.9;
-  border: 1px solid color-mix(in srgb, var(--color-nav-text) 12%, transparent);
-  background: color-mix(in srgb, var(--color-nav-text) 4%, transparent);
+  border: 1px solid color-mix(in srgb, var(--theme-nav-text) 12%, transparent);
+  background: color-mix(in srgb, var(--theme-nav-text) 4%, transparent);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 
   &:hover {
     opacity: 1;
-    background: color-mix(in srgb, var(--color-nav-text) 12%, transparent);
+    background: color-mix(in srgb, var(--theme-nav-text) 12%, transparent);
     border-color: rgba(247, 148, 37, 0.5);
     transform: translateX(4px);
     box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.3);
   }
+}
+
+@utility section-structure {
+  background-color: var(--theme-structure-bg);
+  transition: background-color 0.3s ease;
+}
+
+@utility card-structure {
+  background-color: var(--theme-card-bg);
+  border-color: var(--theme-card-border);
+  transition: all 0.3s ease;
 }
 
 @utility glass-card {
