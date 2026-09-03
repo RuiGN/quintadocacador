@@ -1,0 +1,14 @@
+services:
+  site:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: quintadocacador-site
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:4130:80"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

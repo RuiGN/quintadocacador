@@ -1,269 +1,465 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#12243d" />
     <title>Quinta do Caçador Residence | Lotes entre Paudalho e Carpina</title>
     <meta name="description" content="Lotes a partir de 450 m² em condomínio fechado na BR-408, entre Paudalho e Carpina. Natureza, lazer e segurança para construir o seu futuro." />
+    
+    <!-- Metatags Open Graph para compartilhamento social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Quinta do Caçador Residence | Lotes entre Paudalho e Carpina" />
+    <meta property="og:description" content="Lotes a partir de 450 m² em condomínio fechado na BR-408. Natureza, lazer e segurança para construir o seu futuro." />
+    <meta property="og:image" content="./img/condominio.jpeg" />
+    
     <link rel="icon" href="./img/emblem.jpeg" type="image/jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body class="overflow-x-hidden font-sans antialiased">
-    <a href="#conteudo" class="focus-ring fixed top-3 left-3 z-[100] -translate-y-20 rounded-full bg-white px-5 py-3 font-bold text-ink shadow-xl transition focus:translate-y-0">Pular para o conteúdo</a>
+  <body class="overflow-x-hidden font-sans antialiased text-ink bg-paper">
+    <a href="#conteudo" class="focus-ring fixed top-3 left-3 z-100 -translate-y-20 rounded-full bg-white px-5 py-3 font-bold text-ink shadow-xl transition focus:translate-y-0">
+      Pular para o conteúdo
+    </a>
 
-    <header class="glass-nav fixed inset-x-0 top-0 z-50 border-b border-white/10 text-white">
+    <!-- Header Fixo com Efeito Vidro e Transição Suave -->
+    <header class="glass-nav fixed inset-x-0 top-0 z-50 border-b border-white/10 text-white transition-all duration-300">
       <nav class="section-shell flex h-20 items-center justify-between" aria-label="Navegação principal">
-        <a href="#inicio" class="focus-ring flex items-center gap-3 rounded-md" aria-label="Quinta do Caçador — início">
-          <img src="./img/emblem.jpeg" alt="" class="size-11 rounded-full border border-white/20 object-cover" />
+        <a href="#inicio" class="focus-ring flex items-center gap-3.5 rounded-lg py-1 transition hover:opacity-90" aria-label="Quinta do Caçador Residence — Início">
+          <img src="./img/emblem.jpeg" alt="" class="size-11 rounded-full border border-white/20 object-cover shadow-sm" />
           <span class="leading-none">
             <span class="block font-display text-xl font-semibold tracking-wide">Quinta do Caçador</span>
-            <span class="mt-1 block text-[10px] font-bold tracking-[.32em] text-white/65">RESIDENCE</span>
+            <span class="mt-1 block text-[10px] font-extrabold tracking-[0.34em] text-white/70">RESIDENCE</span>
           </span>
         </a>
+
+        <!-- Links Desktop -->
         <div class="hidden items-center gap-8 text-sm font-semibold lg:flex">
-          <a class="focus-ring rounded-sm transition hover:text-sun" href="#experiencia">Experiência</a>
-          <a class="focus-ring rounded-sm transition hover:text-sun" href="#estrutura">Estrutura</a>
-          <a class="focus-ring rounded-sm transition hover:text-sun" href="#localizacao">Localização</a>
-          <a class="focus-ring inline-flex items-center gap-2 rounded-full bg-sun px-5 py-3 text-ink transition hover:-translate-y-0.5 hover:bg-white" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer">
-            Agende uma visita
+          <a class="focus-ring rounded-md px-2 py-1 transition hover:text-sun" href="#experiencia">Experiência</a>
+          <a class="focus-ring rounded-md px-2 py-1 transition hover:text-sun" href="#estrutura">Estrutura</a>
+          <a class="focus-ring rounded-md px-2 py-1 transition hover:text-sun" href="#localizacao">Localização</a>
+          <a class="focus-ring inline-flex items-center gap-2.5 rounded-full bg-sun px-6 py-2.5 font-bold text-ink shadow-[0_4px_20px_rgba(247,148,37,0.35)] transition-all hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_6px_25px_rgba(255,255,255,0.4)]" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer">
+            <span>Agende uma visita</span>
             <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 fill-none stroke-current stroke-2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
           </a>
         </div>
-        <button id="menu-button" class="focus-ring grid size-11 place-items-center rounded-full border border-white/20 lg:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+
+        <!-- Botão Menu Mobile -->
+        <button id="menu-button" class="focus-ring grid size-11 place-items-center rounded-full border border-white/20 bg-white/5 transition hover:bg-white/10 lg:hidden" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
           <svg id="menu-icon" aria-hidden="true" viewBox="0 0 24 24" class="size-5 fill-none stroke-current stroke-2"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
         </button>
       </nav>
-      <div id="mobile-menu" class="hidden border-t border-white/10 bg-ink px-5 py-5 lg:hidden">
+
+      <!-- Painel do Menu Mobile -->
+      <div id="mobile-menu" class="hidden border-t border-white/10 bg-ink/95 backdrop-blur-2xl px-5 py-6 shadow-2xl lg:hidden">
         <div class="section-shell grid gap-2 px-0">
-          <a class="rounded-xl px-4 py-3 font-semibold hover:bg-white/10" href="#experiencia">Experiência</a>
-          <a class="rounded-xl px-4 py-3 font-semibold hover:bg-white/10" href="#estrutura">Estrutura</a>
-          <a class="rounded-xl px-4 py-3 font-semibold hover:bg-white/10" href="#localizacao">Localização</a>
-          <a class="mt-2 rounded-xl bg-sun px-4 py-3 text-center font-extrabold text-ink" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer">Agende uma visita</a>
+          <a class="flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/10" href="#experiencia">
+            <span>Experiência</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 opacity-50 stroke-current fill-none stroke-2"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+          <a class="flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/10" href="#estrutura">
+            <span>Estrutura</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 opacity-50 stroke-current fill-none stroke-2"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+          <a class="flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/10" href="#localizacao">
+            <span>Localização</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" class="size-4 opacity-50 stroke-current fill-none stroke-2"><path d="M9 18l6-6-6-6"/></svg>
+          </a>
+          <a class="mt-4 flex items-center justify-center gap-2 rounded-xl bg-sun px-5 py-3.5 text-center font-extrabold text-ink shadow-lg" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5 fill-none stroke-current stroke-2"><path d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1 1-4.1A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.4 2.6 2.4 4.6 5 5"/></svg>
+            <span>Agende uma visita</span>
+          </a>
         </div>
       </div>
     </header>
 
     <main id="conteudo">
-      <section id="inicio" class="relative isolate min-h-[850px] overflow-hidden bg-ink pt-32 text-white sm:min-h-[900px] lg:min-h-[780px] lg:pt-20">
-        <div class="fine-grid absolute inset-0 -z-20 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]"></div>
-        <div class="absolute -top-24 -left-32 -z-10 size-[28rem] rounded-full bg-sky/20 blur-3xl"></div>
-        <div class="absolute right-[-12rem] bottom-[-14rem] -z-10 size-[38rem] rounded-full bg-wine/30 blur-3xl"></div>
-        <div class="section-shell grid min-h-[700px] items-center gap-14 py-12 lg:grid-cols-[1.02fr_.98fr] lg:gap-20 lg:py-20">
+      <!-- Hero Section Modernizada -->
+      <section id="inicio" class="relative isolate min-h-215 overflow-hidden bg-ink pt-32 pb-16 text-white sm:min-h-230 sm:pt-36 sm:pb-24 lg:min-h-205 lg:pt-36 lg:pb-24">
+        <div class="fine-grid absolute inset-0 -z-20 mask-[linear-gradient(to_bottom,black,transparent_90%)]"></div>
+        <div class="absolute -top-24 -left-32 -z-10 size-128 rounded-full bg-sky/20 blur-3xl"></div>
+        <div class="absolute -right-40 -bottom-40 -z-10 size-160 rounded-full bg-wine/30 blur-3xl"></div>
+        
+        <div class="section-shell grid min-h-160 items-center gap-12 py-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-16 lg:py-16">
           <div class="relative z-10 animate-fade-up">
-            <div class="mb-7 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-sm font-semibold text-white/85 backdrop-blur-sm">
-              <span class="size-2 rounded-full bg-sun shadow-[0_0_0_5px_rgba(247,148,37,.15)]"></span>
+            <!-- Chip de Localização com Pulso -->
+            <div class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-xs font-semibold text-white/90 backdrop-blur-md">
+              <span class="relative flex size-2.5">
+                <span class="absolute inline-flex size-full animate-ping rounded-full bg-sun opacity-75"></span>
+                <span class="relative inline-flex size-2.5 rounded-full bg-sun"></span>
+              </span>
               BR-408, Km 48 · Paudalho / Carpina
             </div>
-            <h1 class="max-w-3xl font-display text-[clamp(3.6rem,8vw,7.6rem)] leading-[.82] font-semibold tracking-[-.045em]">
+
+            <!-- Título Principal com text-balance e Altura de Linha Segura -->
+            <h1 class="max-w-3xl font-display text-[clamp(2.9rem,7.5vw,6.4rem)] leading-[0.92] sm:leading-[0.88] font-semibold tracking-[-0.04em] text-balance">
               Fora do barulho.<br />
-              <em class="font-semibold text-sun">Dentro da vida.</em>
+              <em class="font-semibold not-italic text-sun drop-shadow-[0_4px_25px_rgba(247,148,37,0.35)]">Dentro da vida.</em>
             </h1>
-            <p class="mt-8 max-w-xl text-lg leading-relaxed text-white/70 sm:text-xl">
-              Lotes amplos, natureza ao redor e uma estrutura pensada para viver com liberdade — a poucos minutos de tudo o que importa.
+
+            <p class="mt-6 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg text-pretty">
+              Lotes amplos a partir de 450 m² em condomínio fechado, cercados pela tranquilidade da natureza e com lazer completo de clube — a poucos minutos de tudo o que importa.
             </p>
-            <div class="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a class="focus-ring group inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-sun px-7 font-extrabold text-ink shadow-[0_14px_40px_rgba(247,148,37,.24)] transition hover:-translate-y-1 hover:bg-white" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer">
-                Quero conhecer
+
+            <!-- Botões de Ação -->
+            <div class="mt-9 flex flex-col gap-3.5 sm:flex-row">
+              <a class="focus-ring group inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-sun px-8 font-extrabold text-ink shadow-[0_12px_35px_rgba(247,148,37,0.3)] transition-all hover:-translate-y-1 hover:bg-white hover:shadow-[0_16px_40px_rgba(255,255,255,0.35)]" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer">
+                <span>Quero conhecer os lotes</span>
                 <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5 fill-none stroke-current stroke-2 transition group-hover:translate-x-1"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
               </a>
-              <a class="focus-ring inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-white/20 px-7 font-bold text-white transition hover:border-white/50 hover:bg-white/8" href="#experiencia">
-                Descubra o Quinta
+              <a class="focus-ring inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-white/20 bg-white/5 px-8 font-bold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/10" href="#experiencia">
+                Descubra o condomínio
               </a>
             </div>
-            <div class="mt-12 flex flex-wrap gap-x-10 gap-y-5 border-t border-white/12 pt-8">
-              <div><strong class="block font-display text-4xl text-white">450 m²</strong><span class="text-sm text-white/55">lotes a partir de</span></div>
-              <div><strong class="block font-display text-4xl text-white">24h</strong><span class="text-sm text-white/55">segurança e tranquilidade</span></div>
-              <div><strong class="block font-display text-4xl text-white">48 km</strong><span class="text-sm text-white/55">do Recife</span></div>
+
+            <!-- Barra de Métricas com Divisores Elegantes -->
+            <div class="mt-12 grid grid-cols-3 divide-x divide-white/15 rounded-2xl border border-white/12 bg-white/5 p-4 sm:p-6 backdrop-blur-md">
+              <div class="px-2 text-center sm:px-4">
+                <strong class="block font-display text-3xl text-white sm:text-4xl">450 m²</strong>
+                <span class="mt-1 block text-xs text-white/60 sm:text-sm">lotes a partir de</span>
+              </div>
+              <div class="px-2 text-center sm:px-4">
+                <strong class="block font-display text-3xl text-white sm:text-4xl">24h</strong>
+                <span class="mt-1 block text-xs text-white/60 sm:text-sm">portaria e segurança</span>
+              </div>
+              <div class="px-2 text-center sm:px-4">
+                <strong class="block font-display text-3xl text-white sm:text-4xl">48 km</strong>
+                <span class="mt-1 block text-xs text-white/60 sm:text-sm">do Recife via BR-408</span>
+              </div>
             </div>
           </div>
 
-          <div class="relative mx-auto w-full max-w-[570px] lg:mx-0 lg:justify-self-end">
-            <div class="absolute -top-8 -right-8 z-10 hidden size-28 animate-drift rounded-full border border-white/15 bg-white/10 p-3 backdrop-blur-md sm:block">
-              <img src="./img/emblem.jpeg" alt="" class="size-full rounded-full object-cover" />
+          <!-- Card Visual Hero com Imagem Principal e Badge Flutuante -->
+          <div class="relative mx-auto w-full max-w-140 lg:mx-0 lg:justify-self-end">
+            <div class="absolute -top-6 -right-6 z-10 hidden size-28 animate-drift rounded-full border border-white/20 bg-white/10 p-3 shadow-xl backdrop-blur-md sm:block">
+              <img src="./img/emblem.jpeg" alt="" class="size-full rounded-full object-cover shadow-inner" />
             </div>
-            <div class="relative overflow-hidden rounded-[2rem] border border-white/15 bg-white/5 p-2 shadow-2xl shadow-black/35 sm:rounded-[3rem]">
-              <img src="./img/condominio.jpeg" alt="Via pavimentada e paisagem verde no Quinta do Caçador Residence" class="aspect-square w-full rounded-[1.6rem] object-cover sm:rounded-[2.6rem]" fetchpriority="high" />
-              <div class="absolute right-5 bottom-5 left-5 flex items-center justify-between rounded-2xl border border-white/15 bg-ink/82 px-5 py-4 backdrop-blur-xl">
-                <div><span class="eyebrow text-sun">Seu lugar</span><p class="mt-1 text-sm font-semibold text-white/85">Natureza para viver. Espaço para criar.</p></div>
-                <svg aria-hidden="true" viewBox="0 0 24 24" class="size-7 fill-none stroke-sun stroke-[1.5]"><path d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <div class="relative overflow-hidden rounded-[2.2rem] border border-white/15 bg-white/5 p-2.5 shadow-2xl shadow-black/40 sm:rounded-[3rem]">
+              <img src="./img/condominio.jpeg" alt="Via pavimentada e paisagem verde no Quinta do Caçador Residence" class="aspect-square w-full rounded-[1.8rem] object-cover sm:rounded-[2.6rem]" fetchpriority="high" />
+              <div class="absolute right-6 bottom-6 left-6 flex items-center justify-between rounded-2xl border border-white/15 bg-ink/85 px-5 py-4 backdrop-blur-xl shadow-lg">
+                <div>
+                  <span class="eyebrow text-sun">Seu lugar</span>
+                  <p class="mt-1 text-sm font-semibold text-white/90">Natureza para viver. Espaço para criar.</p>
+                </div>
+                <div class="grid size-10 place-items-center rounded-full bg-sun/15 text-sun">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-[1.8]"><path d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Seção de Experiência com Galeria Arquitetônica e Fotos Reais -->
       <section id="experiencia" class="py-24 sm:py-32">
         <div class="section-shell">
-          <div class="reveal grid items-end gap-10 lg:grid-cols-[.9fr_1.1fr]">
+          <div class="reveal grid items-end gap-8 lg:grid-cols-[1fr_1.1fr]">
             <div>
               <p class="eyebrow text-wine">Quinta do Caçador Residence</p>
-              <h2 class="mt-5 font-display text-5xl leading-[.96] font-semibold tracking-tight text-ink sm:text-7xl">Espaço para construir a casa que sempre imaginou.</h2>
+              <h2 class="mt-4 font-display text-4xl leading-[1.02] font-semibold tracking-tight text-ink sm:text-6xl text-balance">
+                Espaço generoso para a casa que você sempre sonhou.
+              </h2>
             </div>
-            <div class="lg:pl-16">
-              <p class="max-w-2xl text-lg leading-relaxed text-ink/68">Aqui, o terreno generoso dá liberdade para o seu projeto: casa térrea, piscina, jardim, área gourmet e tudo o que faz sentido para a sua família.</p>
-              <div class="mt-7 flex items-center gap-4 text-sm font-bold text-wine">
-                <span class="h-px w-16 bg-wine"></span>
-                Seu lugar. Sua história.
+            <div class="lg:pl-12">
+              <p class="max-w-2xl text-lg leading-relaxed text-ink/70 text-pretty">
+                Aqui, o terreno amplo garante total liberdade arquitetônica: residência térrea ou sobrado, piscina privativa, área gourmet integrada e jardins exuberantes para desfrutar com sua família.
+              </p>
+              <div class="mt-6 flex items-center gap-4 text-sm font-bold text-wine">
+                <span class="h-px w-12 bg-wine"></span>
+                Seu refúgio exclusivo no interior pernambucano.
               </div>
             </div>
           </div>
 
-          <div class="mt-16 grid gap-5 lg:grid-cols-[1.15fr_.85fr]">
-            <article class="reveal relative min-h-[540px] overflow-hidden rounded-[2rem] bg-ink sm:rounded-[2.5rem]">
-              <img src="./img/espaco-sonho.jpeg" alt="Projeto de residência em lote amplo no Quinta do Caçador" class="absolute inset-0 size-full object-cover object-center" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent"></div>
-              <div class="absolute right-0 bottom-0 left-0 p-7 text-white sm:p-10">
-                <span class="eyebrow text-sun">Lotes a partir de 450 m²</span>
-                <h3 class="mt-3 max-w-lg font-display text-4xl leading-none font-semibold sm:text-5xl">Um projeto sem limites começa com espaço de verdade.</h3>
+          <!-- Vitrine Arquitetônica Bento-Grid Integrando Imagens do Empreendimento -->
+          <div class="mt-16 grid gap-6 lg:grid-cols-3">
+            <!-- Card Principal com espaco-sonho.jpeg -->
+            <article class="reveal card-interactive group relative min-h-115 overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card lg:col-span-2 sm:rounded-[2.5rem]">
+              <img src="./img/espaco-sonho.jpeg" alt="Projeto de residência ampla no Quinta do Caçador" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-linear-to-t from-ink via-ink/30 to-transparent"></div>
+              <div class="absolute right-0 bottom-0 left-0 p-8 text-white sm:p-10">
+                <span class="inline-flex items-center gap-2 rounded-full bg-sun/90 px-3.5 py-1 text-xs font-bold text-ink">
+                  Lotes a partir de 450 m²
+                </span>
+                <h3 class="mt-3 max-w-xl font-display text-3xl leading-tight font-semibold sm:text-4xl text-balance">
+                  Liberdade total para desenhar seu estilo de vida.
+                </h3>
+                <p class="mt-2 max-w-lg text-sm text-white/80 sm:text-base text-pretty">
+                  Dimensões ideais para projetos com recuos generosos, privacidade e integração máxima com a luz natural.
+                </p>
               </div>
             </article>
-            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
-              <article class="reveal rounded-[2rem] bg-wine p-8 text-white sm:p-10">
-                <svg aria-hidden="true" viewBox="0 0 24 24" class="size-9 fill-none stroke-sun stroke-[1.5]"><path d="M3 20h18M5 20V9l7-5 7 5v11M9 20v-6h6v6"/></svg>
-                <p class="mt-12 font-display text-3xl leading-tight font-semibold sm:text-4xl">Construa do seu jeito, no seu tempo.</p>
-                <p class="mt-4 leading-relaxed text-white/70">Terrenos amplos para transformar planos em uma casa feita para a sua rotina.</p>
-              </article>
-              <article class="reveal relative overflow-hidden rounded-[2rem] bg-sun p-8 text-ink sm:p-10">
-                <div class="absolute -right-12 -bottom-14 size-44 rounded-full border-[28px] border-white/25"></div>
-                <p class="eyebrow">Natureza por perto</p>
-                <p class="mt-12 font-display text-3xl leading-tight font-semibold sm:text-4xl">Mais ar livre. Mais tempo em família.</p>
-              </article>
-            </div>
+
+            <!-- Card Secundário com arte-jardins.jpeg -->
+            <article class="reveal card-interactive group relative min-h-115 overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card sm:rounded-[2.5rem]">
+              <img src="./img/arte-jardins.jpeg" alt="Paisagismo e áreas verdes preservadas no condomínio" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-linear-to-t from-ink via-ink/30 to-transparent"></div>
+              <div class="absolute right-0 bottom-0 left-0 p-8 text-white sm:p-10">
+                <span class="inline-flex items-center gap-2 rounded-full bg-leaf/90 px-3.5 py-1 text-xs font-bold text-white">
+                  Natureza Preservada
+                </span>
+                <h3 class="mt-3 font-display text-2xl leading-tight font-semibold sm:text-3xl text-balance">
+                  Paisagismo e Arte ao Ar Livre
+                </h3>
+                <p class="mt-2 text-sm text-white/80 text-pretty">
+                  Alamedas arborizadas e áreas de contemplação que valorizam o condomínio.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card Terceiro com entardecer.jpeg -->
+            <article class="reveal card-interactive group relative min-h-95 overflow-hidden rounded-3xl border border-ink/10 bg-ink shadow-card lg:col-span-3 sm:rounded-[2.5rem]">
+              <img src="./img/entardecer.jpeg" alt="Pôr do sol e vista panorâmica no Quinta do Caçador Residence" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <div class="absolute inset-0 bg-linear-to-r from-ink/90 via-ink/50 to-transparent"></div>
+              <div class="relative z-10 flex h-full flex-col justify-end p-8 text-white sm:max-w-2xl sm:p-12">
+                <span class="inline-flex w-fit items-center gap-2 rounded-full bg-sun/90 px-3.5 py-1 text-xs font-bold text-ink">
+                  Vista Panorâmica
+                </span>
+                <h3 class="mt-4 font-display text-3xl leading-tight font-semibold sm:text-5xl text-balance">
+                  O privilégio de assistir ao pôr do sol todos os dias.
+                </h3>
+                <p class="mt-3 text-base text-white/80 sm:text-lg text-pretty">
+                  Um horizonte aberto e o clima acolhedor da Zona da Mata para desacelerar da rotina com tranquilidade.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="estrutura" class="relative overflow-hidden bg-[#f1eadf] py-24 sm:py-32">
-        <div class="absolute top-0 right-0 h-full w-1/3 bg-[radial-gradient(circle_at_center,rgba(247,148,37,.18),transparent_62%)]"></div>
+      <!-- Seção de Estrutura e Lazer -->
+      <section id="estrutura" class="relative overflow-hidden bg-[#f4efe6] py-24 sm:py-32">
+        <div class="absolute top-0 right-0 h-full w-1/3 bg-[radial-gradient(circle_at_center,rgba(247,148,37,0.16),transparent_65%)]"></div>
         <div class="section-shell relative">
           <div class="reveal max-w-3xl">
-            <p class="eyebrow text-leaf">Tudo ao seu redor</p>
-            <h2 class="mt-5 font-display text-5xl leading-none font-semibold tracking-tight sm:text-7xl">Um condomínio feito para viver bem.</h2>
-            <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink/65">Tranquilidade, lazer e paisagens que mudam o ritmo dos seus dias.</p>
+            <p class="eyebrow text-leaf">Clube de Lazer Completo</p>
+            <h2 class="mt-4 font-display text-4xl leading-tight font-semibold tracking-tight text-ink sm:text-6xl text-balance">
+              Infraestrutura pensada para o bem-estar da família.
+            </h2>
+            <p class="mt-5 max-w-2xl text-lg leading-relaxed text-ink/70 text-pretty">
+              Opções de esporte, convivência e descanso em um ambiente fechado e seguro para todas as idades.
+            </p>
           </div>
-          <div class="mt-14 grid gap-px overflow-hidden rounded-[2rem] border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
-            <article class="group bg-paper p-8 transition hover:bg-white sm:p-10">
-              <div class="grid size-12 place-items-center rounded-2xl bg-sky/12 text-sky transition group-hover:-translate-y-1">
-                <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-[1.7]"><path d="M2 16c1.2-1 2.4-1 3.6 0s2.4 1 3.6 0 2.4-1 3.6 0 2.4 1 3.6 0 2.4-1 3.6 0M2 20c1.2-1 2.4-1 3.6 0s2.4 1 3.6 0 2.4-1 3.6 0 2.4 1 3.6 0 2.4-1 3.6 0M7 13V5a3 3 0 0 1 6 0v8M7 8h6"/></svg>
+
+          <!-- Grid de Amenidades com Tags e Interatividade -->
+          <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="reveal card-interactive rounded-3xl border border-ink/8 bg-white p-8 shadow-card hover:shadow-card-hover transition-all sm:p-9">
+              <div class="flex items-center justify-between">
+                <div class="grid size-12 place-items-center rounded-2xl bg-sky/15 text-sky">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-2"><path d="M2 16c1.2-1 2.4-1 3.6 0s2.4 1 3.6 0 2.4-1 3.6 0 2.4-1 3.6 0M2 20c1.2-1 2.4-1 3.6 0s2.4 1 3.6 0 2.4-1 3.6 0 2.4-1 3.6 0 2.4-1 3.6 0M7 13V5a3 3 0 0 1 6 0v8M7 8h6"/></svg>
+                </div>
+                <span class="rounded-full bg-sky/10 px-3 py-1 text-xs font-bold text-sky">Lazer Aquático</span>
               </div>
-              <h3 class="mt-8 font-display text-3xl font-semibold">Piscina</h3><p class="mt-3 leading-relaxed text-ink/60">Momentos de descanso e diversão para toda a família.</p>
+              <h3 class="mt-7 font-display text-2xl font-semibold text-ink sm:text-3xl">Parque Aquático</h3>
+              <p class="mt-3 text-sm leading-relaxed text-ink/65 text-pretty sm:text-base">Piscina com deck molhado e solarium para aproveitar os dias ensolarados com conforto.</p>
             </article>
-            <article class="group bg-paper p-8 transition hover:bg-white sm:p-10">
-              <div class="grid size-12 place-items-center rounded-2xl bg-leaf/12 text-leaf transition group-hover:-translate-y-1">
-                <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-[1.7]"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8M8.5 3.7c2 4.5 2 12 0 16.6M15.5 3.7c-2 4.5-2 12 0 16.6"/></svg>
+
+            <article class="reveal card-interactive rounded-3xl border border-ink/8 bg-white p-8 shadow-card hover:shadow-card-hover transition-all sm:p-9">
+              <div class="flex items-center justify-between">
+                <div class="grid size-12 place-items-center rounded-2xl bg-leaf/15 text-leaf">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-2"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8M8.5 3.7c2 4.5 2 12 0 16.6M15.5 3.7c-2 4.5-2 12 0 16.6"/></svg>
+                </div>
+                <span class="rounded-full bg-leaf/10 px-3 py-1 text-xs font-bold text-leaf">Esporte & Saúde</span>
               </div>
-              <h3 class="mt-8 font-display text-3xl font-semibold">Quadras</h3><p class="mt-3 leading-relaxed text-ink/60">Esporte, movimento e encontros que fazem parte da rotina.</p>
+              <h3 class="mt-7 font-display text-2xl font-semibold text-ink sm:text-3xl">Complexo Esportivo</h3>
+              <p class="mt-3 text-sm leading-relaxed text-ink/65 text-pretty sm:text-base">Quadras poliesportivas e pista de corrida para manter o corpo ativo sem sair do condomínio.</p>
             </article>
-            <article class="group bg-paper p-8 transition hover:bg-white sm:p-10">
-              <div class="grid size-12 place-items-center rounded-2xl bg-sun/15 text-wine transition group-hover:-translate-y-1">
-                <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-[1.7]"><path d="M12 22V9M7 22h10M12 9C7 9 5 6.4 5 3c3.8 0 7 1.3 7 6Zm0 4c5 0 7-2.6 7-6-3.8 0-7 1.3-7 6Z"/></svg>
+
+            <article class="reveal card-interactive rounded-3xl border border-ink/8 bg-white p-8 shadow-card hover:shadow-card-hover transition-all sm:p-9">
+              <div class="flex items-center justify-between">
+                <div class="grid size-12 place-items-center rounded-2xl bg-sun/20 text-wine">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-2"><path d="M12 22V9M7 22h10M12 9C7 9 5 6.4 5 3c3.8 0 7 1.3 7 6Zm0 4c5 0 7-2.6 7-6-3.8 0-7 1.3-7 6Z"/></svg>
+                </div>
+                <span class="rounded-full bg-sun/15 px-3 py-1 text-xs font-bold text-wine">Biofilia</span>
               </div>
-              <h3 class="mt-8 font-display text-3xl font-semibold">Áreas verdes</h3><p class="mt-3 leading-relaxed text-ink/60">Jardins, arte e natureza presentes em cada passeio.</p>
+              <h3 class="mt-7 font-display text-2xl font-semibold text-ink sm:text-3xl">Áreas Verdes & Pomar</h3>
+              <p class="mt-3 text-sm leading-relaxed text-ink/65 text-pretty sm:text-base">Espaços arborizados, gramados e jardins de contemplação integrados ao relevo natural.</p>
             </article>
-            <article class="group bg-paper p-8 transition hover:bg-white sm:p-10">
-              <div class="grid size-12 place-items-center rounded-2xl bg-wine/10 text-wine transition group-hover:-translate-y-1">
-                <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-[1.7]"><path d="M4 21v-9m16 9v-9M2 12h20M5 8l2-5 2 5m6 0 2-5 2 5M7 16h10M9 12v4m6-4v4"/></svg>
+
+            <article class="reveal card-interactive rounded-3xl border border-ink/8 bg-white p-8 shadow-card hover:shadow-card-hover transition-all sm:p-9">
+              <div class="flex items-center justify-between">
+                <div class="grid size-12 place-items-center rounded-2xl bg-wine/15 text-wine">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-2"><path d="M4 21v-9m16 9v-9M2 12h20M5 8l2-5 2 5m6 0 2-5 2 5M7 16h10M9 12v4m6-4v4"/></svg>
+                </div>
+                <span class="rounded-full bg-wine/10 px-3 py-1 text-xs font-bold text-wine">Espaço Kids</span>
               </div>
-              <h3 class="mt-8 font-display text-3xl font-semibold">Playground</h3><p class="mt-3 leading-relaxed text-ink/60">Espaço para as crianças brincarem e criarem memórias.</p>
+              <h3 class="mt-7 font-display text-2xl font-semibold text-ink sm:text-3xl">Playground Ecológico</h3>
+              <p class="mt-3 text-sm leading-relaxed text-ink/65 text-pretty sm:text-base">Brinquedos seguros ao ar livre onde as crianças podem crescer em contato com a terra.</p>
             </article>
-            <article class="group bg-paper p-8 transition hover:bg-white sm:p-10">
-              <div class="grid size-12 place-items-center rounded-2xl bg-sky/12 text-sky transition group-hover:-translate-y-1">
-                <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-[1.7]"><path d="M4 21V10l8-6 8 6v11M8 21v-5h8v5M2 21h20"/></svg>
+
+            <article class="reveal card-interactive rounded-3xl border border-ink/8 bg-white p-8 shadow-card hover:shadow-card-hover transition-all sm:p-9">
+              <div class="flex items-center justify-between">
+                <div class="grid size-12 place-items-center rounded-2xl bg-sky/15 text-sky">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-2"><path d="M4 21V10l8-6 8 6v11M8 21v-5h8v5M2 21h20"/></svg>
+                </div>
+                <span class="rounded-full bg-sky/10 px-3 py-1 text-xs font-bold text-sky">Social & Gourmet</span>
               </div>
-              <h3 class="mt-8 font-display text-3xl font-semibold">Convivência</h3><p class="mt-3 leading-relaxed text-ink/60">Ambientes pensados para celebrar e receber bem.</p>
+              <h3 class="mt-7 font-display text-2xl font-semibold text-ink sm:text-3xl">Salão de Convivência</h3>
+              <p class="mt-3 text-sm leading-relaxed text-ink/65 text-pretty sm:text-base">Espaço de festas climatizado e quiosques com churrasqueira para celebrar momentos especiais.</p>
             </article>
-            <article class="group bg-paper p-8 transition hover:bg-white sm:p-10">
-              <div class="grid size-12 place-items-center rounded-2xl bg-leaf/12 text-leaf transition group-hover:-translate-y-1">
-                <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-[1.7]"><path d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+
+            <article class="reveal card-interactive rounded-3xl border border-ink/8 bg-white p-8 shadow-card hover:shadow-card-hover transition-all sm:p-9">
+              <div class="flex items-center justify-between">
+                <div class="grid size-12 place-items-center rounded-2xl bg-leaf/15 text-leaf">
+                  <svg aria-hidden="true" viewBox="0 0 24 24" class="size-6 fill-none stroke-current stroke-2"><path d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                </div>
+                <span class="rounded-full bg-leaf/10 px-3 py-1 text-xs font-bold text-leaf">Mobilidade</span>
               </div>
-              <h3 class="mt-8 font-display text-3xl font-semibold">Fácil acesso</h3><p class="mt-3 leading-relaxed text-ink/60">Na margem da BR-408, entre Paudalho e Carpina.</p>
+              <h3 class="mt-7 font-display text-2xl font-semibold text-ink sm:text-3xl">Acesso Privilegiado</h3>
+              <p class="mt-3 text-sm leading-relaxed text-ink/65 text-pretty sm:text-base">Portaria moderna na margem da BR-408 duplicada, com fluxo rápido entre Paudalho e Carpina.</p>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- Seção de Localização com Distâncias Claras -->
       <section id="localizacao" class="bg-ink py-24 text-white sm:py-32">
-        <div class="section-shell grid items-center gap-14 lg:grid-cols-[.95fr_1.05fr] lg:gap-20">
+        <div class="section-shell grid items-center gap-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <div class="reveal">
-            <p class="eyebrow text-sun">Localização privilegiada</p>
-            <h2 class="mt-5 font-display text-5xl leading-none font-semibold tracking-tight sm:text-7xl">Perto de tudo. Longe apenas da correria.</h2>
-            <p class="mt-7 max-w-xl text-lg leading-relaxed text-white/65">Entre Paudalho e Carpina, o Quinta do Caçador une acesso rápido, tranquilidade e paisagens abertas.</p>
+            <p class="eyebrow text-sun">Localização Estratégica</p>
+            <h2 class="mt-4 font-display text-4xl leading-tight font-semibold tracking-tight sm:text-6xl text-balance">
+              Perto de tudo. Longe apenas da correria.
+            </h2>
+            <p class="mt-6 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg text-pretty">
+              Posicionado no Km 48 da BR-408, o condomínio garante acesso veloz e seguro à infraestrutura de serviços de Carpina e a curta distância da Região Metropolitana do Recife.
+            </p>
+
             <dl class="mt-10 grid gap-4 sm:grid-cols-2">
-              <div class="rounded-2xl border border-white/12 bg-white/5 p-5"><dt class="text-sm text-white/50">Shopping Carpina</dt><dd class="mt-1 font-display text-3xl font-semibold">4,7 km</dd></div>
-              <div class="rounded-2xl border border-white/12 bg-white/5 p-5"><dt class="text-sm text-white/50">Centro de Carpina</dt><dd class="mt-1 font-display text-3xl font-semibold">6 km</dd></div>
-              <div class="rounded-2xl border border-white/12 bg-white/5 p-5"><dt class="text-sm text-white/50">Recife</dt><dd class="mt-1 font-display text-3xl font-semibold">40–48 km</dd></div>
-              <div class="rounded-2xl border border-white/12 bg-white/5 p-5"><dt class="text-sm text-white/50">Acesso principal</dt><dd class="mt-1 font-display text-3xl font-semibold">BR-408</dd></div>
+              <div class="card-interactive rounded-2xl border border-white/12 bg-white/5 p-5 backdrop-blur-sm">
+                <dt class="flex items-center justify-between text-xs text-white/60 font-semibold uppercase tracking-wider">
+                  <span>Shopping Carpina</span>
+                  <span class="text-sun font-bold">~ 6 min</span>
+                </dt>
+                <dd class="mt-2 font-display text-3xl font-semibold text-white">4,7 km</dd>
+              </div>
+
+              <div class="card-interactive rounded-2xl border border-white/12 bg-white/5 p-5 backdrop-blur-sm">
+                <dt class="flex items-center justify-between text-xs text-white/60 font-semibold uppercase tracking-wider">
+                  <span>Centro de Carpina</span>
+                  <span class="text-sun font-bold">~ 8 min</span>
+                </dt>
+                <dd class="mt-2 font-display text-3xl font-semibold text-white">6,0 km</dd>
+              </div>
+
+              <div class="card-interactive rounded-2xl border border-white/12 bg-white/5 p-5 backdrop-blur-sm">
+                <dt class="flex items-center justify-between text-xs text-white/60 font-semibold uppercase tracking-wider">
+                  <span>Recife</span>
+                  <span class="text-sun font-bold">BR-408 duplicada</span>
+                </dt>
+                <dd class="mt-2 font-display text-3xl font-semibold text-white">40–48 km</dd>
+              </div>
+
+              <div class="card-interactive rounded-2xl border border-white/12 bg-white/5 p-5 backdrop-blur-sm">
+                <dt class="flex items-center justify-between text-xs text-white/60 font-semibold uppercase tracking-wider">
+                  <span>Acesso Principal</span>
+                  <span class="text-leaf font-bold">Sem trânsito</span>
+                </dt>
+                <dd class="mt-2 font-display text-3xl font-semibold text-white">BR-408, Km 48</dd>
+              </div>
             </dl>
-            <a class="focus-ring mt-8 inline-flex items-center gap-3 rounded-full bg-white px-6 py-4 font-extrabold text-ink transition hover:-translate-y-1 hover:bg-sun" href="https://www.google.com/maps/search/?api=1&query=Condom%C3%ADnio%20Quinta%20do%20Ca%C3%A7ador%20Paudalho%20PE" target="_blank" rel="noopener noreferrer">
-              Ver rota no Google Maps
+
+            <a class="focus-ring mt-9 inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 font-extrabold text-ink transition-all hover:-translate-y-1 hover:bg-sun hover:shadow-lg" href="https://www.google.com/maps/search/?api=1&query=Condom%C3%ADnio%20Quinta%20do%20Ca%C3%A7ador%20Paudalho%20PE" target="_blank" rel="noopener noreferrer">
+              <span>Abrir rota no Google Maps</span>
               <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5 fill-none stroke-current stroke-2"><path d="M12 22s7-6.1 7-13a7 7 0 1 0-14 0c0 6.9 7 13 7 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>
             </a>
           </div>
-          <figure class="reveal relative overflow-hidden rounded-[2rem] border border-white/12 bg-white/5 p-2 shadow-2xl sm:rounded-[3rem]">
-            <img src="./img/paisagem.jpeg" alt="Vista aérea e distâncias de referência do Quinta do Caçador Residence" class="aspect-square w-full rounded-[1.6rem] object-cover sm:rounded-[2.6rem]" loading="lazy" />
+
+          <!-- Imagem Aérea com Moldura Premium -->
+          <figure class="reveal relative overflow-hidden rounded-[2.2rem] border border-white/15 bg-white/5 p-2.5 shadow-2xl sm:rounded-[3rem]">
+            <img src="./img/paisagem.jpeg" alt="Vista aérea e mapa de referências do Quinta do Caçador Residence" class="aspect-square w-full rounded-[1.8rem] object-cover sm:rounded-[2.6rem]" loading="lazy" />
+            <div class="absolute top-6 left-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink/80 px-4 py-1.5 text-xs font-bold text-white backdrop-blur-md">
+              <span class="size-2 rounded-full bg-sun"></span>
+              BR-408, Km 48 · Paudalho, PE
+            </div>
           </figure>
         </div>
       </section>
 
+      <!-- Chamada para Ação (CTA) com Destaque e Contraste -->
       <section class="relative overflow-hidden bg-sun py-24 sm:py-28">
-        <div class="absolute inset-0 opacity-20 [background-image:radial-gradient(#12243d_1px,transparent_1px)] [background-size:22px_22px]"></div>
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#12243d_1px,transparent_1px)] bg-size-[24px_24px]"></div>
         <div class="section-shell relative text-center">
-          <img src="./img/emblem.jpeg" alt="" class="mx-auto size-24 rounded-full border-4 border-paper shadow-xl" loading="lazy" />
-          <p class="eyebrow mt-8 text-wine">Venha conhecer de perto</p>
-          <h2 class="mx-auto mt-4 max-w-4xl font-display text-5xl leading-[.95] font-semibold tracking-tight text-ink sm:text-7xl">Seu futuro pode começar com uma visita.</h2>
-          <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink/68">Converse com nossa equipe e descubra as condições para garantir o seu lugar no Quinta do Caçador Residence.</p>
-          <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
-            <a class="focus-ring inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-ink px-8 font-extrabold text-white shadow-xl transition hover:-translate-y-1 hover:bg-wine" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer">
-              Falar pelo WhatsApp
-              <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5 fill-none stroke-current stroke-2"><path d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1 1-4.1A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.4 2.6 2.4 4.6 5 5"/></svg>
-            </a>
-            <a class="focus-ring inline-flex min-h-14 items-center justify-center gap-3 rounded-full border-2 border-ink/20 px-8 font-extrabold text-ink transition hover:border-ink hover:bg-white/40" href="https://www.instagram.com/quintadocacador/" target="_blank" rel="noopener noreferrer">Ver Instagram</a>
+          <div class="mx-auto inline-flex size-24 items-center justify-center rounded-full border-4 border-paper bg-white shadow-xl">
+            <img src="./img/emblem.jpeg" alt="" class="size-full rounded-full object-cover" loading="lazy" />
           </div>
-          <p class="mt-7 text-sm font-semibold text-ink/55">(81) 99162-0040 · Atendimento para agendamento</p>
+          <p class="eyebrow mt-7 text-wine font-extrabold">Plantão de Vendas no Local</p>
+          <h2 class="mx-auto mt-4 max-w-4xl font-display text-4xl leading-tight font-semibold tracking-tight text-ink sm:text-6xl lg:text-7xl text-balance">
+            Seu futuro começa com uma visita ao condomínio.
+          </h2>
+          <p class="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-ink/75 sm:text-lg text-pretty">
+            Converse diretamente com nossos corretores credenciados, escolha o seu lote na planta e conheça as condições especiais de financiamento direto.
+          </p>
+
+          <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+            <a class="focus-ring inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-ink px-9 font-extrabold text-white shadow-xl transition-all hover:-translate-y-1 hover:bg-wine hover:shadow-2xl" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5 fill-none stroke-current stroke-2"><path d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1 1-4.1A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.4 2.6 2.4 4.6 5 5"/></svg>
+              <span>Falar pelo WhatsApp</span>
+            </a>
+            <a class="focus-ring inline-flex min-h-14 items-center justify-center gap-3 rounded-full border-2 border-ink/25 bg-white/30 px-9 font-extrabold text-ink backdrop-blur-sm transition-all hover:border-ink hover:bg-white" href="https://www.instagram.com/quintadocacador/" target="_blank" rel="noopener noreferrer">
+              <span>Acompanhe no Instagram</span>
+            </a>
+          </div>
+
+          <p class="mt-7 text-sm font-semibold text-ink/65">
+            (81) 99162-0040 · Atendimento todos os dias para agendamentos
+          </p>
         </div>
       </section>
     </main>
 
-    <footer class="bg-[#0b182a] py-12 text-white">
-      <div class="section-shell flex flex-col items-start justify-between gap-8 border-b border-white/10 pb-10 sm:flex-row sm:items-center">
-        <a href="#inicio" class="focus-ring flex items-center gap-4 rounded-md">
+    <!-- Rodapé -->
+    <footer class="bg-ink-deep py-14 text-white">
+      <div class="section-shell flex flex-col items-start justify-between gap-8 border-b border-white/10 pb-12 sm:flex-row sm:items-center">
+        <a href="#inicio" class="focus-ring flex items-center gap-4 rounded-lg py-1 transition hover:opacity-90">
           <img src="./img/emblem.jpeg" alt="" class="size-14 rounded-full border border-white/15 object-cover" />
-          <span><span class="block font-display text-2xl font-semibold">Quinta do Caçador</span><span class="block text-[10px] font-bold tracking-[.3em] text-white/50">RESIDENCE</span></span>
+          <span>
+            <span class="block font-display text-2xl font-semibold">Quinta do Caçador</span>
+            <span class="block text-[10px] font-bold tracking-[0.32em] text-white/50">RESIDENCE</span>
+          </span>
         </a>
+
         <div class="flex flex-col items-start gap-6 sm:items-end">
-          <div class="flex flex-wrap gap-x-7 gap-y-3 text-sm font-semibold text-white/65">
-            <a class="focus-ring rounded-sm hover:text-white" href="#experiencia">Experiência</a>
-            <a class="focus-ring rounded-sm hover:text-white" href="#estrutura">Estrutura</a>
-            <a class="focus-ring rounded-sm hover:text-white" href="#localizacao">Localização</a>
+          <div class="flex flex-wrap gap-x-7 gap-y-3 text-sm font-semibold text-white/70">
+            <a class="focus-ring rounded-sm hover:text-sun transition" href="#experiencia">Experiência</a>
+            <a class="focus-ring rounded-sm hover:text-sun transition" href="#estrutura">Estrutura</a>
+            <a class="focus-ring rounded-sm hover:text-sun transition" href="#localizacao">Localização</a>
           </div>
+
           <div class="flex items-center gap-3" aria-label="Redes sociais">
-            <a class="focus-ring grid size-11 place-items-center rounded-full border border-white/15 text-white/70 transition hover:-translate-y-1 hover:border-sun hover:bg-sun hover:text-ink" href="https://www.instagram.com/quintadocacador/" target="_blank" rel="noopener noreferrer" aria-label="Quinta do Caçador no Instagram" title="Instagram">
+            <a class="focus-ring grid size-11 place-items-center rounded-full border border-white/15 text-white/75 transition hover:-translate-y-1 hover:border-sun hover:bg-sun hover:text-ink" href="https://www.instagram.com/quintadocacador/" target="_blank" rel="noopener noreferrer" aria-label="Quinta do Caçador no Instagram" title="Instagram">
               <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5 fill-none stroke-current stroke-[1.8]"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="fill-current stroke-none"/></svg>
             </a>
-            <a class="focus-ring grid size-11 place-items-center rounded-full border border-white/15 text-white/70 transition hover:-translate-y-1 hover:border-sun hover:bg-sun hover:text-ink" href="https://www.facebook.com/QuintadoCacador/" target="_blank" rel="noopener noreferrer" aria-label="Quinta do Caçador no Facebook" title="Facebook">
+            <a class="focus-ring grid size-11 place-items-center rounded-full border border-white/15 text-white/75 transition hover:-translate-y-1 hover:border-sun hover:bg-sun hover:text-ink" href="https://www.facebook.com/QuintadoCacador/" target="_blank" rel="noopener noreferrer" aria-label="Quinta do Caçador no Facebook" title="Facebook">
               <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5 fill-current"><path d="M14 8.5V7c0-.8.5-1 1-1h2.5V2.1L14.1 2C10.7 2 9 4 9 7.1v1.4H6v4.3h3V22h5v-9.2h3.3l.6-4.3H14Z"/></svg>
             </a>
-            <a class="focus-ring grid size-11 place-items-center rounded-full border border-white/15 text-white/70 transition hover:-translate-y-1 hover:border-sun hover:bg-sun hover:text-ink" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer" aria-label="Falar com a Quinta do Caçador pelo WhatsApp" title="WhatsApp">
+            <a class="focus-ring grid size-11 place-items-center rounded-full border border-white/15 text-white/75 transition hover:-translate-y-1 hover:border-sun hover:bg-sun hover:text-ink" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer" aria-label="Falar com a Quinta do Caçador pelo WhatsApp" title="WhatsApp">
               <svg aria-hidden="true" viewBox="0 0 24 24" class="size-5 fill-none stroke-current stroke-[1.8]"><path d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1 1-4.1A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.4 2.6 2.4 4.6 5 5"/></svg>
             </a>
           </div>
         </div>
       </div>
-      <div class="section-shell grid gap-3 pt-7 text-sm text-white/40 sm:grid-cols-2 lg:grid-cols-3 lg:items-center">
-        <p>© <span id="year">2026</span> Quinta do Caçador Residence.</p>
+
+      <div class="section-shell grid gap-4 pt-8 text-sm text-white/45 sm:grid-cols-2 lg:grid-cols-3 lg:items-center">
+        <p>© <span id="year">2026</span> Quinta do Caçador Residence. Todos os direitos reservados.</p>
         <p class="sm:text-right lg:text-center">BR-408, Km 48 · Paudalho, PE</p>
-        <p class="sm:col-span-2 lg:col-span-1 lg:text-right">Desenvolvido por <a class="focus-ring rounded-sm font-bold text-white/70 underline decoration-white/20 underline-offset-4 transition hover:text-sun hover:decoration-sun" href="https://rgnsystems.com.br" target="_blank" rel="noopener noreferrer">RGN Systems Tecnologia</a></p>
+        <p class="sm:col-span-2 lg:col-span-1 lg:text-right">
+          Desenvolvido por <a class="focus-ring rounded-sm font-bold text-white/75 underline decoration-white/20 underline-offset-4 transition hover:text-sun hover:decoration-sun" href="https://rgnsystems.com.br" target="_blank" rel="noopener noreferrer">RGN Systems Tecnologia</a>
+        </p>
       </div>
     </footer>
 
-    <a class="focus-ring fixed right-5 bottom-5 z-40 inline-flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_12px_35px_rgba(0,0,0,.28)] transition hover:-translate-y-1 hover:scale-105 sm:right-7 sm:bottom-7" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer" aria-label="Falar com o Quinta do Caçador pelo WhatsApp">
+    <!-- Botão Flutuante do WhatsApp -->
+    <a class="focus-ring fixed right-5 bottom-5 z-40 inline-flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_12px_35px_rgba(0,0,0,0.28)] transition-all hover:-translate-y-1 hover:scale-105 sm:right-7 sm:bottom-7" href="https://wa.me/5581991620040?text=Olá!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Quinta%20do%20Caçador%20Residence." target="_blank" rel="noopener noreferrer" aria-label="Falar com o Quinta do Caçador pelo WhatsApp">
+      <span class="absolute -top-1 -right-1 flex size-4">
+        <span class="absolute inline-flex size-full animate-ping rounded-full bg-white opacity-75"></span>
+        <span class="relative inline-flex size-4 rounded-full bg-sun"></span>
+      </span>
       <svg aria-hidden="true" viewBox="0 0 24 24" class="size-7 fill-none stroke-current stroke-2"><path d="M20 11.5a8 8 0 0 1-11.8 7l-4.2 1 1-4.1A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.4 2.6 2.4 4.6 5 5"/></svg>
     </a>
 
+    <!-- Script modular externo de acordo com o W3C -->
     <script src="./js/main.js" defer></script>
   </body>
 </html>
