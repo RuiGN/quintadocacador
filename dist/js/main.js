@@ -7,16 +7,71 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header');
   const menuButton = document.getElementById('menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+
+  // Sistema de Alternância Dark / Light Mode
+  const updateThemeUI = (isDark) => {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      if (themeToggle) {
+        themeToggle.setAttribute('aria-label', 'Mudar para modo claro');
+        themeToggle.setAttribute('title', 'Mudar para modo claro');
+      }
+      if (themeToggleMobile) {
+        themeToggleMobile.setAttribute('aria-label', 'Mudar para modo claro');
+        themeToggleMobile.setAttribute('title', 'Mudar para modo claro');
+      }
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      if (themeToggle) {
+        themeToggle.setAttribute('aria-label', 'Mudar para modo escuro');
+        themeToggle.setAttribute('title', 'Mudar para modo escuro');
+      }
+      if (themeToggleMobile) {
+        themeToggleMobile.setAttribute('aria-label', 'Mudar para modo escuro');
+        themeToggleMobile.setAttribute('title', 'Mudar para modo escuro');
+      }
+    }
+  };
+
+  const toggleTheme = () => {
+    const isCurrentlyDark = document.documentElement.classList.contains('dark');
+    updateThemeUI(!isCurrentlyDark);
+  };
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+  }
+  if (themeToggleMobile) {
+    themeToggleMobile.addEventListener('click', toggleTheme);
+  }
+
+  // Sincronizar com tema salvo ou preferência do sistema
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    updateThemeUI(true);
+  } else {
+    updateThemeUI(false);
+  }
+
+  // Ouvir mudança nas configurações do SO caso não haja escolha explícita do usuário
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      updateThemeUI(e.matches);
+    }
+  });
 
   // Controle de elevação/sombra do header ao rolar
   const handleScroll = () => {
     if (!header) return;
     if (window.scrollY > 24) {
-      header.classList.add('shadow-xl', 'bg-ink/95');
-      header.classList.remove('bg-ink/85');
+      header.classList.add('shadow-xl', 'backdrop-blur-2xl');
     } else {
-      header.classList.remove('shadow-xl', 'bg-ink/95');
-      header.classList.add('bg-ink/85');
+      header.classList.remove('shadow-xl');
     }
   };
 
