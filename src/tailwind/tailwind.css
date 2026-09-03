@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "./theme.css"; 
+@theme { 
+--font-body: "Source Sans 3";
+--font-heading: "Playfair Display";
+ }
